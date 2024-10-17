@@ -1,7 +1,7 @@
 const projects = [
     {
         id: 1,
-        image: '/photo/1.jpg',
+        image: 'photo/1.jpg',
         title: 'Caesar Cipher',
         links: [
             { title: 'GitHub Repo', url: 'https://youtu.be/8wTm9ouWrTo?feature=shared' }
