@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #272727; /* Warna abu-abu */
+    height: 100vh; /* Mengatur tinggi menjadi 100% dari viewport */
+}
+
+.container {
+    text-align: center;
+    padding: 50px;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    background-color: black; /* Latar belakang hitam jika gambar tidak ada */
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    overflow: hidden; /* Pastikan gambar tidak keluar dari lingkaran */
+}
+
+.profile-pic img {
+    width: 100%; /* Memastikan gambar mengisi lebar div */
+    height: 100%; /* Memastikan gambar mengisi tinggi div */
+    object-fit: cover; /* Memastikan gambar terpotong dengan baik dalam lingkaran */
+}
+
+.bio {
+    font-size: 14px; /* Ukuran font */
+    padding: 10px; /* Padding */
+    margin: 32.5px auto 0; /* Margin: 40px atas, 10px bawah, otomatis sisi kiri dan kanan */
+    max-width: 700px; /* Lebar maksimal */
+    color: white; /* Mengubah warna font menjadi putih */
+}
+
+.project-section {
+    margin-top: 50px;
+}
+
+.project {
+    margin-top: 50px;
+    position: relative; /* Agar elemen anak bisa diposisikan dengan absolute */
+}
+
+.project-image-container {
+    position: relative; /* Agar overlay-text bisa diposisikan dengan absolute */
+    width: 100%; /* Mengisi lebar container */
+    height: 200px; /* Atur tinggi untuk memastikan gambar tidak terlalu kecil */
+    overflow: hidden; /* Pastikan isi tidak keluar dari div */
+}
+
+.project-image {
+    width: 100%; /* Agar gambar memenuhi container */
+    height: 100%; /* Mengatur tinggi gambar sesuai dengan container */
+    object-fit: cover; /* Agar gambar terpotong dengan baik dalam batasan */
+    border-radius: 15px; /* Sudut gambar membulat */
+}
+
+.overlay-text {
+    position: absolute; /* Memungkinkan penempatan teks di atas gambar */
+    top: 50%; /* Mengatur posisi teks di tengah secara vertikal */
+    left: 50%; /* Mengatur posisi teks di tengah secara horizontal */
+    transform: translate(-50%, -50%); /* Menggeser teks untuk benar-benar memusatkan */
+    color: white; /* Warna teks */
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang transparan */
+    padding: 10px; /* Padding untuk teks */
+    border-radius: 15px; /* Sudut teks membulat */
+    text-align: center; /* Memusatkan teks dalam overlay */
+    white-space: nowrap; /* Mencegah teks terputus */
+    font-size: 4vw; /* Responsif dengan vw */
+}
+
+/* Media query untuk layar kecil (mobile devices) */
+@media (max-width: 600px) {
+    .overlay-text {
+        font-size: 8vw; /* Ukuran font sedikit lebih besar untuk perangkat kecil */
+        padding: 15px; /* Tambahkan padding untuk memastikan area teks tetap terlihat */
+    }
+}
+
+/* Media query untuk layar sedang (tablet atau desktop kecil) */
+@media (min-width: 600px) and (max-width: 1023px) {
+    .overlay-text {
+        font-size: 8vw; /* Ukuran lebih kecil tapi tetap terlihat */
+        padding: 15px; /* Pastikan padding cukup untuk menjaga teks tetap terlihat */
+    }
+}
+
+/* Media query untuk layar besar */
+@media (min-width: 1024px) {
+    .overlay-text {
+        font-size: 6vw; /* Ukuran font lebih kecil di layar besar */
+        padding: 18px;
+    }
+}
+
+/* Menambahkan gaya untuk gambar di dalam .project */
+.project img {
+    width: 100%; /* Mengisi lebar .project */
+    height: auto; /* Tinggi otomatis agar proporsional */
+    object-fit: cover; /* Memastikan gambar terpotong dengan baik dalam batasan */
+}
+
+button.toggle-btn {
+    margin-top: 4px;
+    background-color: #575757; /* Background merah */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghapus border default tombol */
+    padding: 10px 0px; /* Padding agar tombol lebih besar */
+    width: 100%; /* Membuat tombol memenuhi lebar container */
+    cursor: pointer; /* Menampilkan kursor pointer saat hover */
+    transition: background-color 0.3s ease; /* Efek transisi saat hover */
+}
+
+/* Efek saat hover */
+button.toggle-btn:hover {
+    background-color: #464646; /* Mengubah warna latar belakang saat hover */
+}
+
+/* Hidden links mulai dengan height 0 dan max-height untuk efek transisi */
+/* Hidden links initially have a max-height of 0 */
+.hidden-links {
+    max-height: 0;
+    overflow: hidden;
+    background-color: #575757;
+    transition: max-height 0.5s ease, background-color 0.3s ease; /* Smooth transition */
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* When hovering over the hidden-links, shrink its size */
+
+.hidden-links a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+}
+
+.hidden-links a:hover {
+    background-color: #464646; /* Keep the background-color change */
+}
+
