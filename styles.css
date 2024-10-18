@@ -55,6 +55,10 @@ body {
     position: relative; /* Agar overlay-text bisa diposisikan dengan absolute */
     width: 100%; /* Mengisi lebar container */
     height: 200px; /* Atur tinggi untuk memastikan gambar tidak terlalu kecil */
+    border-top-left-radius: 15px; /* Sudut kiri atas membulat */
+    border-top-right-radius: 15px; /* Sudut kanan atas membulat */
+    border-bottom-left-radius: 0; /* Sudut kiri bawah tetap tajam */
+    border-bottom-right-radius: 0; /* Sudut kanan bawah tetap tajam */
     overflow: hidden; /* Pastikan isi tidak keluar dari div */
 }
 
@@ -62,8 +66,8 @@ body {
     width: 100%; /* Agar gambar memenuhi container */
     height: 100%; /* Mengatur tinggi gambar sesuai dengan container */
     object-fit: cover; /* Agar gambar terpotong dengan baik dalam batasan */
-    border-radius: 15px; /* Sudut gambar membulat */
 }
+
 
 .overlay-text {
     position: absolute; /* Memungkinkan penempatan teks di atas gambar */
