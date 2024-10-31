@@ -64,7 +64,7 @@ function renderProjects() {
         // Create toggle button
         const toggleButton = document.createElement('button');
         toggleButton.className = 'toggle-btn';
-        toggleButton.textContent = 'LINKS';
+        toggleButton.textContent = "LET'S JUMP TO IT !";
         
         // Create hidden links div
         const hiddenLinksDiv = document.createElement('div');
