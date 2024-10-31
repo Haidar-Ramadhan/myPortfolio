@@ -13,6 +13,17 @@ const projects = [
                 url: 'https://github.com/Haidar-Ramadhan/Caesar-Cipher' 
             }
         ]
+    },
+     {
+        id: 2,
+        image: 'photo/1.jpg',
+        title: 'AES Encryption',
+        links: [
+            { 
+                title: 'Structure', 
+                url: 'https://drive.google.com/file/d/1zpxpnblAZJF829_RJIBOtuYb8LSGSBHS/view?usp=drive_link' 
+            }
+        ]
     }
     // Add more projects as needed
 ];
