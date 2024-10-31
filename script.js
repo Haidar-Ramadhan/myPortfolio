@@ -1,5 +1,16 @@
 const projects = [
     {
+        id: 2,
+        image: 'photo/1.jpg',
+        title: 'AES Encryption',
+        links: [
+            { 
+                title: 'Structure', 
+                url: 'https://drive.google.com/file/d/1zpxpnblAZJF829_RJIBOtuYb8LSGSBHS/view?usp=drive_link' 
+            }
+        ]
+    },
+    {
         id: 1,
         image: 'photo/1.jpg',
         title: 'Caesar Cipher',
@@ -13,18 +24,7 @@ const projects = [
                 url: 'https://github.com/Haidar-Ramadhan/Caesar-Cipher' 
             }
         ]
-    },
-     {
-        id: 2,
-        image: 'photo/1.jpg',
-        title: 'AES Encryption',
-        links: [
-            { 
-                title: 'Structure', 
-                url: 'https://drive.google.com/file/d/1zpxpnblAZJF829_RJIBOtuYb8LSGSBHS/view?usp=drive_link' 
-            }
-        ]
-    }
+    }  
     // Add more projects as needed
 ];
 
@@ -78,6 +78,7 @@ function renderProjects() {
             const anchor = document.createElement('a');
             anchor.href = link.url;
             anchor.textContent = link.title; // Use the link title
+            anchor.target = '_blank'; // Open link in a new tab
             hiddenLinksDiv.appendChild(anchor);
         });
 
