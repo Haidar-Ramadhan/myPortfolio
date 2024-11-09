@@ -6,7 +6,7 @@ const projects = [
         links: [
             { 
                 title: 'Structure', 
-                url: 'https://drive.google.com/file/d/1zpxpnblAZJF829_RJIBOtuYb8LSGSBHS/view?usp=drive_link' 
+                url: 'https://drive.google.com/file/d/1zpxpnblAZJF829_RJIBOtuYb8LSGSBHS/view?usp=sharing' 
             }
         ]
     },
@@ -15,6 +15,10 @@ const projects = [
         image: 'photo/1.jpg',
         title: 'Caesar Cipher',
         links: [
+            { 
+                title: 'Structure', 
+                url: 'https://drive.google.com/file/d/1UV-0Lsyg5xYZFfZg02nlbGZjcrKcVDWJ/view?usp=sharing' 
+            },
             { 
                 title: 'Docker Image', 
                 url: 'https://hub.docker.com/r/hairam/caesarcipher' 
